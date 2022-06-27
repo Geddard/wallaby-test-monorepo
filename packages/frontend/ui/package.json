@@ -1,0 +1,58 @@
+{
+  "name": "@goe/ui",
+  "private": true,
+  "version": "3.0.0",
+  "main": "build/index.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "emit": "tsc -p tsconfig.json",
+    "emit:watch": "tsc -p tsconfig.json --watch",
+    "watch": "babel src --out-dir build --extensions '.ts,.tsx,!.test.ts' --ignore '**/*.test.ts' --ignore '**/*.test.tsx' --watch",
+    "build": "babel src --out-dir build --extensions '.ts,.tsx' --ignore '**/*.test.ts' --ignore '**/*.test.tsx'",
+    "test": "jest --config jest.config.js",
+    "test:ci": "jest --config jest.config.js --runInBand --watchAll=false",
+    "test:watch": "jest --watchAll --config jest.config.js",
+    "coverage": "jest --coverage",
+    "coverage:watch": "jest --coverage --watchAll",
+    "lint": "eslint src"
+  },
+  "peerDependencies": {
+    "@mui/icons-material": "5.6.2",
+    "@mui/material": "^5.6.2",
+    "react-router-dom": "^6.3.0"
+  },
+  "dependencies": {
+    "clsx": "^1.1.1",
+    "deepmerge": "^4.2.2",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-typescript": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.6.2",
+    "@mui/types": "^7.1.3",
+    "@testing-library/jest-dom": "~5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "~13.5.0",
+    "@types/babel__core": "^7.1.19",
+    "@types/babel__preset-env": "^7.9.2",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.31",
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.0",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/testing-library__jest-dom": "^5.14.3",
+    "babel-plugin-inline-import-data-uri": "^1.0.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "react-router-dom": "^6.3.0"
+  }
+}

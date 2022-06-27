@@ -1,0 +1,30 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "noEmit": false,
+    "outDir": "build",
+    "rootDir": "src",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@/config": ["src/config.ts"],
+      "@/components/*": ["src/components/*"],
+      "@/assets/*": ["src/assets/*"]
+    }
+  },
+  "types": [
+    "jest",
+    "@types/testing-library__react",
+    "@types/testing-library__jest-dom",
+    "node"
+  ],  
+  "exclude": ["build"],
+  "include": ["src"]
+}
